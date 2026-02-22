@@ -13,12 +13,12 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 
     <!-- font link  -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"> 
     <style>
         *{
-            font-family: "Outfit", sans-serif;
+            font-family: "Geist", sans-serif;
         }
     </style>
 
@@ -27,9 +27,52 @@
 
 
 </head>
-<body>
+<body class=" bg-[#ecf5fd] min-h-screen">
 
-    Job Application Tracker
+    <section>
+    <div class="tracker-block sm:mx-[145px] lg:mx-[245px] py-[60px]">
+        
+        <div class="text-[#002C5C] font-bold text-[26px] lg:text-[32px] pb-[20px]">Job Application Tracker</div>
+        
+        <div class="blockss flex justify-between">
+
+        <!-- total -->
+        <div class="total_job w-[360px] h-[120px] bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px] ">
+           <div class="pb-[8px]"> Total </div> 
+           <div class="text-[28px] font-bold text-[#002C5C] "> 8 </div> 
+        </div>    
+
+        <!-- Interview  -->
+        <div class="total_job w-[360px] h-[120px] bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px]">
+            <div class="pb-[8px]"> Interview </div>
+            <div class="text-[28px] font-bold text-[#10B981] "> 0 </div>
+        </div>
+
+
+        <!-- Rejected  -->
+        <div class="total_job w-[360px] h-[120px] bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px]">
+            <div class="pb-[8px]"> Rejected </div>
+            <div class="text-[28px] font-bold text-[#EF4444] "> 0 </div>
+        </div>
+        </div>
+
+    </div>
+    </section>
+    
+    <section>    
+     <hr class="border-[#d3d2d2] w-[1190px] mx-[245px] pb-11 "> 
+    </section>
+
+    <section class="Job-posts sm:mx-[145px] lg:mx-[245px] ">
+
+        <div class="text-[#002C5C] font-semibold text-[26px] ">Available Jobs</div>
+
+    </section>
+
+
     
 </body>
+
+
+
 </html>
