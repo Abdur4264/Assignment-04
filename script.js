@@ -36,7 +36,38 @@ document.addEventListener("DOMContentLoaded",() => {
                 jobCountEL.textContent = `${rejectedCards.length} jobs`;
             }
 
-            
+    function applyFilter(filter){
+        currentFilter = filter;
+        let visibleCount = 0;
+
+        document.querySelectorAll("[data-status]").forEach(card=> {
+            const status = card.getAttribute("data-status");
+
+            if (filter === "all"){
+                card.style.display = "block";
+                visibleCount++;
+            } else if (status === filter){
+                card.style.display = "block";
+                visibleCount++;
+            } else {
+                card.style.display="none";
+            }
+        });
+        
+    if (visibleCount === 0){
+        cardContainer.appendChild(emptyState);
+    } else{
+        if (cardContainer.contains(emptyState)){
+            cardContainer.removeChild(emptyState);
+        }
+    }
+
+    updateCounts();
+
+    }        
+
+
+    
        
 
         
