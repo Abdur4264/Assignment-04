@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded",() => {
-    const cards = document.querySelector("[data-status]");
+document.addEventListener("DOMContentLoaded", () => {
+
     const totalCountEl = document.querySelector(".total-count");
     const interviewCountEL = document.querySelector(".interview-count");
     const rejectedCountEl = document.querySelector(".rejected-count");
@@ -14,13 +14,15 @@ document.addEventListener("DOMContentLoaded",() => {
     let currentFilter = "all";
 
     const emptyState = document.createElement("div");
-    emptyState.className = "text-center py-20 text-[#94A3BB]"
-    emptyState.innerHTML = `<i class="fa-regular fa-folder-open text-6xl mb-4"></i>
-        <p class="text-lg font-medium">No jobs found</p>`;
+    emptyState.className = "text-center py-20 text-[#94A3BB]";
+    emptyState.innerHTML = `
+        <i class="fa-regular fa-folder-open text-6xl mb-4"></i>
+        <p class="text-lg font-medium">No jobs found</p>
+    `;
 
     function updateCounts(){
         const allCards = document.querySelectorAll("[data-status]");
-        const interViewCards = document.querySelectorAll('[data-status="interview]');
+        const interViewCards = document.querySelectorAll('[data-status="interview"]');
         const rejectedCards = document.querySelectorAll('[data-status="rejected"]');
 
         totalCountEl.textContent = allCards.length;
@@ -28,13 +30,13 @@ document.addEventListener("DOMContentLoaded",() => {
         rejectedCountEl.textContent = rejectedCards.length;
 
         if (currentFilter === "all"){
-            jobCountEL.textContent=`${allCards.length} jobs`;
-           }  else if (currentFilter==="interview"){
-                jobCountEL.textContent = `${interViewCards.length}jobs`;
-
-            }else {
-                jobCountEL.textContent = `${rejectedCards.length} jobs`;
-            }
+            jobCountEL.textContent = `${allCards.length} jobs`;
+        } else if (currentFilter === "interview"){
+            jobCountEL.textContent = `${interViewCards.length} jobs`;
+        } else {
+            jobCountEL.textContent = `${rejectedCards.length} jobs`;
+        }
+    }
 
     function applyFilter(filter){
         currentFilter = filter;
@@ -43,10 +45,7 @@ document.addEventListener("DOMContentLoaded",() => {
         document.querySelectorAll("[data-status]").forEach(card=> {
             const status = card.getAttribute("data-status");
 
-            if (filter === "all"){
-                card.style.display = "block";
-                visibleCount++;
-            } else if (status === filter){
+            if (filter === "all" || status === filter){
                 card.style.display = "block";
                 visibleCount++;
             } else {
@@ -54,34 +53,46 @@ document.addEventListener("DOMContentLoaded",() => {
             }
         });
         
-    if (visibleCount === 0){
-        cardContainer.appendChild(emptyState);
-    } else{
-        if (cardContainer.contains(emptyState)){
-            cardContainer.removeChild(emptyState);
+        if (visibleCount === 0){
+            cardContainer.appendChild(emptyState);
+        } else {
+            if (cardContainer.contains(emptyState)){
+                cardContainer.removeChild(emptyState);
+            }
         }
-    }
 
-    updateCounts();
-
+        updateCounts();
     }        
-    
+
     document.querySelectorAll(".interview-btn").forEach(btn=>{
         btn.addEventListener("click",() =>{
-            const card = btn.closest ("[data-status]");
+            const card = btn.closest("[data-status]");
             card.setAttribute("data-status", "interview");
             applyFilter(currentFilter);
         });
     });
 
-    
+    document.querySelectorAll(".rejected-btn").forEach(btn=>{
+        btn.addEventListener("click",() =>{
+            const card = btn.closest("[data-status]");
+            card.setAttribute("data-status", "rejected");
+            applyFilter(currentFilter);
+        });
+    });
 
+    document.querySelectorAll(".delete-btn, .fa-trash-can").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            const card = e.target.closest("[data-status]");
+            if (card) {
+                card.remove();
+                applyFilter(currentFilter);
+            }
+        });
+    });
 
-       
+    filterAllBtn.addEventListener("click", () => applyFilter("all"));
+    filterInterviewBtn.addEventListener("click", () => applyFilter("interview"));
+    filterRejectedBtn.addEventListener("click", () => applyFilter("rejected"));
 
-        
-
-
-        
-    }
-})
+    updateCounts();
+});
