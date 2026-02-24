@@ -65,9 +65,18 @@ document.addEventListener("DOMContentLoaded",() => {
     updateCounts();
 
     }        
-
+    
+    document.querySelectorAll(".interview-btn").forEach(btn=>{
+        btn.addEventListener("click",() =>{
+            const card = btn.closest ("[data-status]");
+            card.setAttribute("data-status", "interview");
+            applyFilter(currentFilter);
+        });
+    });
 
     
+
+
        
 
         
