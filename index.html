@@ -28,7 +28,7 @@
 
 
 </head>
-<body class=" bg-[#ecf5fd] min-h-[5000px]">
+<body class=" bg-[#ecf5fd] min-h-[4000px]">
 
     <section>
     <div class="tracker-block px-4 sm:px-10 md:px-16 lg:px-[245px] py-10 sm:py-[60px]">
@@ -66,7 +66,10 @@
 
     <section class="Job-posts px-4 sm:px-10 md:px-16 lg:px-60 ">
 
-        <div class="text-[#002C5C] font-semibold text-[24px] sm:text-[26px] lg:text-[32px]">Available Jobs</div>
+        <div class="flex items-center justify-between">
+            <h1 class="text-[#002C5C] font-semibold text-[24px] sm:text-[26px] lg:text-[32px]">Available Jobs</h1>
+            <h3 class=" job-count text-[#64748B] font-medium text-[16px] ">8 jobs</h3>
+        </div>
 
         <div class="flex gap-2 pt-4 pb-12">
             <button class="bg-[#3B82F6] text-white px-10 py-2.5 font-medium rounded-[5px]">All</button>
@@ -79,7 +82,11 @@
     
 
        <!-- card-01 -->
-      <div class="grid grid-cols-5 grid-rows-9 gap-4">
+      <div class="grid grid-cols-5 grid-rows-9 gap-4 relative">
+
+        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <i class="fa-regular fa-trash-can"></i>
+        </button>
 
         <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] "> 
         <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">Mobile First Corp </h1> 
@@ -92,14 +99,19 @@
 
         <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
         <br>
-        <button class="stroke-[#10B981] text-[#10B981] px-10 py-2.5 font-medium rounded-[5px]">Interview</button>
-        <button class="stroke-[#10B981] text-[#EF4444] px-10 py-2.5 font-medium rounded-[5px]">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px]">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px]">Rejected</button>
         </div>      
         <!-- card-01 -->
         
 
         <!-- card-02 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] "> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative "> 
+
+        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <i class="fa-regular fa-trash-can"></i>
+        </button>
+            
         <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">DataStream Inc </h1> 
         <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">Data Engineer</h2> 
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Hybrid • Full-time • $120,000 - $160,000</h3>
@@ -110,14 +122,19 @@
 
         <p>Design and maintain scalable data pipelines that power real-time analytics for enterprise clients globally.</p>
         <br>
-        <button class="bg-white text-[#10B981] px-10 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="bg-white text-[#EF4444] px-10 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
         </div>      
         <!-- card-02 -->      
 
 
         <!-- card-03 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] "> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative">
+            
+        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <i class="fa-regular fa-trash-can"></i>
+        </button>
+
         <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">CloudNest Solutions </h1> 
         <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">DevOps Engineer</h2> 
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Full-time • $125,000 - $170,000</h3>
@@ -128,14 +145,19 @@
 
         <p>Manage cloud infrastructure and CI/CD pipelines to ensure seamless deployment across distributed systems.</p>
         <br>
-        <button class="bg-white text-[#10B981] px-10 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="bg-white text-[#EF4444] px-10 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
         </div>
         <!-- card-03 -->            
         
 
         <!-- card-04 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] "> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative"> 
+
+        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <i class="fa-regular fa-trash-can"></i>
+        </button>
+
         <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">FinEdge Technologies </h1> 
         <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">Backend Developer</h2> 
         <h3 class=" text-[#64748B] text-[14px] font-regular ">On-site • Full-time • $115,000 - $155,000</h3>
@@ -146,14 +168,19 @@
 
         <p>Build robust REST APIs and microservices supporting millions of financial transactions processed daily.</p>
         <br>
-        <button class="bg-white text-[#10B981] px-10 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="bg-white text-[#EF4444] px-10 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
         </div>
         <!-- card-04 --> 
 
 
         <!-- card-05 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] "> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative"> 
+
+        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <i class="fa-regular fa-trash-can"></i>
+        </button>           
+
         <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">PixelForge Studio </h1> 
         <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">UI/UX Designer</h2> 
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Contract • $90,000 - $130,000</h3>
@@ -164,14 +191,19 @@
 
         <p>Craft intuitive and visually compelling user experiences for consumer-facing web and mobile products.</p>
         <br>
-        <button class="bg-white text-[#10B981] px-10 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="bg-white text-[#EF4444] px-10 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
         </div>
         <!-- card-05 --> 
 
 
         <!-- card-06 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] "> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative"> 
+
+        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <i class="fa-regular fa-trash-can"></i>
+        </button>
+
         <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">NeuralBridge AI </h1> 
         <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">Machine Learning Engineer</h2> 
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Full-time • $140,000 - $190,000</h3>
@@ -182,14 +214,19 @@
 
         <p>Develop and deploy ML models that enhance product intelligence across a suite of AI-driven applications.</p>
         <br>
-        <button class="bg-white text-[#10B981] px-10 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="bg-white text-[#EF4444] px-10 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
         </div>
         <!-- card-06 --> 
 
 
          <!-- card-07 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] "> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative"> 
+
+        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <i class="fa-regular fa-trash-can"></i>
+        </button>
+
         <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">SecureLayer Corp </h1> 
         <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">Cybersecurity Analyst</h2> 
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Hybrid • Full-time • $110,000 - $150,000</h3>
@@ -200,14 +237,19 @@
 
         <p>Monitor, detect, and respond to security threats to protect critical infrastructure and sensitive customer data.</p>
         <br>
-        <button class="bg-white text-[#10B981] px-10 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="bg-white text-[#EF4444] px-10 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
         </div>
         <!-- card-07 --> 
 
 
         <!-- card-08 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] "> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative "> 
+
+        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <i class="fa-regular fa-trash-can"></i>
+        </button>
+
         <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">GrowthLoop Agency </h1> 
         <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">Full Stack Developer</h2> 
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Full-time • $105,000 - $145,000</h3>
@@ -218,10 +260,12 @@
 
         <p>Build end-to-end web features for high-growth SaaS clients using modern JavaScript frameworks and cloud services.</p>
         <br>
-        <button class="bg-white text-[#10B981] px-10 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="bg-white text-[#EF4444] px-10 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
         </div>
         <!-- card-08 -->
+        
+
 
 
     </div>
