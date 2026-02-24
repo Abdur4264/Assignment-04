@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Tracker</title>
-    
+
+
+    <!-- js linking   -->
+    <script src="./script.js" defer></script>
 
     <!-- tailwind and daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -40,20 +43,20 @@
         <!-- total -->
         <div class="total_job bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px] ">
            <div class="pb-[8px]"> Total </div> 
-           <div class="text-[28px] font-bold text-[#002C5C] "> 8 </div> 
+           <div class="text-[28px] font-bold text-[#002C5C] total-count "> 8 </div> 
         </div>    
 
         <!-- Interview  -->
         <div class="total_job bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px]">
             <div class="pb-[8px]"> Interview </div>
-            <div class="text-[28px] font-bold text-[#10B981] "> 0 </div>
+            <div class="text-[28px] font-bold text-[#10B981] interview-count "> 0 </div>
         </div>
 
 
         <!-- Rejected  -->
         <div class="total_job bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px]">
             <div class="pb-[8px]"> Rejected </div>
-            <div class="text-[28px] font-bold text-[#EF4444] "> 0 </div>
+            <div class="text-[28px] font-bold text-[#EF4444] rejected-count "> 0 </div>
         </div>
         </div>
 
@@ -72,9 +75,9 @@
         </div>
 
         <div class="flex gap-2 pt-4 pb-12">
-            <button class="bg-[#3B82F6] text-white px-10 py-2.5 font-medium rounded-[5px]">All</button>
-            <button class="bg-white text-[#64748B] px-10 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-            <button class="bg-white text-[#64748B] px-10 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+            <button class="bg-[#3B82F6] text-white px-10 py-2.5 font-medium rounded-[5px]" id="filter-all">All</button>
+            <button class="bg-white text-[#64748B] px-10 py-2.5 font-medium rounded-[5px] shadow" id="filter-interview" >Interview</button>
+            <button class="bg-white text-[#64748B] px-10 py-2.5 font-medium rounded-[5px] shadow" id="filter-rejected" >Rejected</button>
         </div>
         
 
@@ -82,7 +85,7 @@
     
 
        <!-- card-01 -->
-      <div class="grid grid-cols-5 grid-rows-9 gap-4 relative">
+      <div class="card-grid grid grid-cols-5 grid-rows-9 gap-4 relative" data-status="none">
 
         <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
         <i class="fa-regular fa-trash-can"></i>
@@ -99,14 +102,14 @@
 
         <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
         <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px]">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px]">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] interview-btn">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] rejected-btn" >Rejected</button>
         </div>      
         <!-- card-01 -->
         
 
         <!-- card-02 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative "> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative " data-status="none"> 
 
         <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
         <i class="fa-regular fa-trash-can"></i>
@@ -122,16 +125,16 @@
 
         <p>Design and maintain scalable data pipelines that power real-time analytics for enterprise clients globally.</p>
         <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
         </div>      
         <!-- card-02 -->      
 
 
         <!-- card-03 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative">
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none">
             
-        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
         <i class="fa-regular fa-trash-can"></i>
         </button>
 
@@ -140,21 +143,21 @@
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Full-time • $125,000 - $170,000</h3>
 
         <div class="pt-4 pb-8">
-            <button class="bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
         </div>
 
         <p>Manage cloud infrastructure and CI/CD pipelines to ensure seamless deployment across distributed systems.</p>
         <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
         </div>
         <!-- card-03 -->            
         
 
         <!-- card-04 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative"> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none"> 
 
-        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
         <i class="fa-regular fa-trash-can"></i>
         </button>
 
@@ -163,21 +166,21 @@
         <h3 class=" text-[#64748B] text-[14px] font-regular ">On-site • Full-time • $115,000 - $155,000</h3>
 
         <div class="pt-4 pb-8">
-            <button class="bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
         </div>
 
         <p>Build robust REST APIs and microservices supporting millions of financial transactions processed daily.</p>
         <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
         </div>
         <!-- card-04 --> 
 
 
         <!-- card-05 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative"> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none"> 
 
-        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
         <i class="fa-regular fa-trash-can"></i>
         </button>           
 
@@ -186,21 +189,21 @@
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Contract • $90,000 - $130,000</h3>
 
         <div class="pt-4 pb-8">
-            <button class="bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
         </div>
 
         <p>Craft intuitive and visually compelling user experiences for consumer-facing web and mobile products.</p>
         <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
         </div>
         <!-- card-05 --> 
 
 
         <!-- card-06 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative"> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none"> 
 
-        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
         <i class="fa-regular fa-trash-can"></i>
         </button>
 
@@ -209,21 +212,21 @@
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Full-time • $140,000 - $190,000</h3>
 
         <div class="pt-4 pb-8">
-            <button class="bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
         </div>
 
         <p>Develop and deploy ML models that enhance product intelligence across a suite of AI-driven applications.</p>
         <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
         </div>
         <!-- card-06 --> 
 
 
          <!-- card-07 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative"> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none"> 
 
-        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
         <i class="fa-regular fa-trash-can"></i>
         </button>
 
@@ -232,21 +235,21 @@
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Hybrid • Full-time • $110,000 - $150,000</h3>
 
         <div class="pt-4 pb-8">
-            <button class="bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
         </div>
 
         <p>Monitor, detect, and respond to security threats to protect critical infrastructure and sensitive customer data.</p>
         <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
         </div>
         <!-- card-07 --> 
 
 
         <!-- card-08 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative "> 
+        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative " data-status="none"> 
 
-        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
         <i class="fa-regular fa-trash-can"></i>
         </button>
 
@@ -255,13 +258,13 @@
         <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Full-time • $105,000 - $145,000</h3>
 
         <div class="pt-4 pb-8">
-            <button class="bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
         </div>
 
         <p>Build end-to-end web features for high-growth SaaS clients using modern JavaScript frameworks and cloud services.</p>
         <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow">Rejected</button>
+        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
         </div>
         <!-- card-08 -->
         
