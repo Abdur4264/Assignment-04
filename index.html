@@ -4,280 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Tracker</title>
-
-
-    <!-- js linking   -->
     <script src="./script.js" defer></script>
-
-    <!-- tailwind and daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <!-- daisytheme  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-
-    <!-- font link  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"> 
-    <style>
-        *{
-            font-family: "Geist", sans-serif;
-        }
-    </style>
-
-    <!-- icon link -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <style>* { font-family: "Geist", sans-serif; }</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class=" bg-[#ecf5fd] min-h-[4000px]">
+<body class="bg-[#ecf5fd] min-h-[4000px]">
 
     <section>
-    <div class="tracker-block px-4 sm:px-10 md:px-16 lg:px-[245px] py-10 sm:py-[60px]">
-        
-        <div class="text-[#002C5C] font-bold text-[24px] sm:text-[26px] lg:text-[32px] pb-5">Job Application Tracker</div>
-        
-        <div class="blockss grid grid-cols-1 sm:grid-cols-3 gap-4">
-
-        <!-- total -->
-        <div class="total_job bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px] ">
-           <div class="pb-[8px]"> Total </div> 
-           <div class="text-[28px] font-bold text-[#002C5C] total-count "> 8 </div> 
-        </div>    
-
-        <!-- Interview  -->
-        <div class="total_job bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px]">
-            <div class="pb-[8px]"> Interview </div>
-            <div class="text-[28px] font-bold text-[#10B981] interview-count "> 0 </div>
+        <div class="tracker-block px-4 sm:px-10 md:px-16 lg:px-[245px] py-10 sm:py-[60px]">
+            <div class="text-[#002C5C] font-bold text-[24px] sm:text-[26px] lg:text-[32px] pb-5">Job Application Tracker</div>
+            <div class="blockss grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="total_job bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px]">
+                    <div class="pb-[8px]">Total</div>
+                    <div class="text-[28px] font-bold text-[#002C5C] total-count">8</div>
+                </div>
+                <div class="total_job bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px]">
+                    <div class="pb-[8px]">Interview</div>
+                    <div class="text-[28px] font-bold text-[#10B981] interview-count">0</div>
+                </div>
+                <div class="total_job bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px]">
+                    <div class="pb-[8px]">Rejected</div>
+                    <div class="text-[28px] font-bold text-[#EF4444] rejected-count">0</div>
+                </div>
+            </div>
         </div>
-
-
-        <!-- Rejected  -->
-        <div class="total_job bg-white text-[#323B49] rounded-[8px] font-medium text-[18px] px-[20px] py-[20px]">
-            <div class="pb-[8px]"> Rejected </div>
-            <div class="text-[28px] font-bold text-[#EF4444] rejected-count "> 0 </div>
-        </div>
-        </div>
-
-    </div>
-    </section>
-    
-    <section>    
-     <hr class="border-[#d3d2d2] mx-4 sm:mx-10 md:mx-16 lg:mx-60 mb-10 "> 
     </section>
 
-    <section class="Job-posts px-4 sm:px-10 md:px-16 lg:px-60 ">
+    <section>
+        <hr class="border-[#d3d2d2] mx-4 sm:mx-10 md:mx-16 lg:mx-60 mb-10">
+    </section>
+
+    <section class="Job-posts px-4 sm:px-10 md:px-16 lg:px-60">
 
         <div class="flex items-center justify-between">
             <h1 class="text-[#002C5C] font-semibold text-[24px] sm:text-[26px] lg:text-[32px]">Available Jobs</h1>
-            <h3 class=" job-count text-[#64748B] font-medium text-[16px] ">8 jobs</h3>
+            <h3 class="job-count text-[#64748B] font-medium text-[16px]">8 jobs</h3>
         </div>
 
         <div class="flex gap-2 pt-4 pb-12">
             <button class="bg-[#3B82F6] text-white px-10 py-2.5 font-medium rounded-[5px]" id="filter-all">All</button>
-            <button class="bg-white text-[#64748B] px-10 py-2.5 font-medium rounded-[5px] shadow" id="filter-interview" >Interview</button>
-            <button class="bg-white text-[#64748B] px-10 py-2.5 font-medium rounded-[5px] shadow" id="filter-rejected" >Rejected</button>
-        </div>
-        
-
-
-    
-
-       <!-- card-01 -->
-      <div class="card-grid grid grid-cols-5 grid-rows-9 gap-4 relative" data-status="none">
-
-        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
-        <i class="fa-regular fa-trash-can"></i>
-        </button>
-
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] "> 
-        <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">Mobile First Corp </h1> 
-        <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">React Native Developer</h2> 
-        <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Full-time • $130,000 - $175,000</h3>
-
-        <div class="pt-4 pb-8">
-            <button class="bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+            <button class="bg-white text-[#64748B] px-10 py-2.5 font-medium rounded-[5px] shadow" id="filter-interview">Interview</button>
+            <button class="bg-white text-[#64748B] px-10 py-2.5 font-medium rounded-[5px] shadow" id="filter-rejected">Rejected</button>
         </div>
 
-        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-        <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] interview-btn">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] rejected-btn" >Rejected</button>
-        </div>      
-        <!-- card-01 -->
-        
+        <div class="card-grid grid grid-cols-5 grid-rows-9 gap-4">
 
-        <!-- card-02 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative " data-status="none"> 
+            <!-- card-01 -->
+            <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none">
+                <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h1 class="text-[#002C5C] text-[18px] font-semibold pb-1">Mobile First Corp</h1>
+                <h2 class="text-[#64748B] text-[16px] font-regular pb-4">React Native Developer</h2>
+                <h3 class="text-[#64748B] text-[14px] font-regular">Remote • Full-time • $130,000 - $175,000</h3>
+                <div class="pt-4 pb-8">
+                    <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+                </div>
+                <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <br>
+                <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+                <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn">Rejected</button>
+            </div>
 
-        <button class="absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
-        <i class="fa-regular fa-trash-can"></i>
-        </button>
-            
-        <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">DataStream Inc </h1> 
-        <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">Data Engineer</h2> 
-        <h3 class=" text-[#64748B] text-[14px] font-regular ">Hybrid • Full-time • $120,000 - $160,000</h3>
+            <!-- card-02 -->
+            <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none">
+                <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h1 class="text-[#002C5C] text-[18px] font-semibold pb-1">DataStream Inc</h1>
+                <h2 class="text-[#64748B] text-[16px] font-regular pb-4">Data Engineer</h2>
+                <h3 class="text-[#64748B] text-[14px] font-regular">Hybrid • Full-time • $120,000 - $160,000</h3>
+                <div class="pt-4 pb-8">
+                    <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+                </div>
+                <p>Design and maintain scalable data pipelines that power real-time analytics for enterprise clients globally.</p>
+                <br>
+                <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+                <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn">Rejected</button>
+            </div>
 
-        <div class="pt-4 pb-8">
-            <button class="bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+            <!-- card-03 -->
+            <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none">
+                <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h1 class="text-[#002C5C] text-[18px] font-semibold pb-1">CloudNest Solutions</h1>
+                <h2 class="text-[#64748B] text-[16px] font-regular pb-4">DevOps Engineer</h2>
+                <h3 class="text-[#64748B] text-[14px] font-regular">Remote • Full-time • $125,000 - $170,000</h3>
+                <div class="pt-4 pb-8">
+                    <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+                </div>
+                <p>Manage cloud infrastructure and CI/CD pipelines to ensure seamless deployment across distributed systems.</p>
+                <br>
+                <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+                <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn">Rejected</button>
+            </div>
+
+            <!-- card-04 -->
+            <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none">
+                <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h1 class="text-[#002C5C] text-[18px] font-semibold pb-1">FinEdge Technologies</h1>
+                <h2 class="text-[#64748B] text-[16px] font-regular pb-4">Backend Developer</h2>
+                <h3 class="text-[#64748B] text-[14px] font-regular">On-site • Full-time • $115,000 - $155,000</h3>
+                <div class="pt-4 pb-8">
+                    <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+                </div>
+                <p>Build robust REST APIs and microservices supporting millions of financial transactions processed daily.</p>
+                <br>
+                <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+                <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn">Rejected</button>
+            </div>
+
+            <!-- card-05 -->
+            <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none">
+                <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h1 class="text-[#002C5C] text-[18px] font-semibold pb-1">PixelForge Studio</h1>
+                <h2 class="text-[#64748B] text-[16px] font-regular pb-4">UI/UX Designer</h2>
+                <h3 class="text-[#64748B] text-[14px] font-regular">Remote • Contract • $90,000 - $130,000</h3>
+                <div class="pt-4 pb-8">
+                    <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+                </div>
+                <p>Craft intuitive and visually compelling user experiences for consumer-facing web and mobile products.</p>
+                <br>
+                <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+                <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn">Rejected</button>
+            </div>
+
+            <!-- card-06 -->
+            <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none">
+                <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h1 class="text-[#002C5C] text-[18px] font-semibold pb-1">NeuralBridge AI</h1>
+                <h2 class="text-[#64748B] text-[16px] font-regular pb-4">Machine Learning Engineer</h2>
+                <h3 class="text-[#64748B] text-[14px] font-regular">Remote • Full-time • $140,000 - $190,000</h3>
+                <div class="pt-4 pb-8">
+                    <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+                </div>
+                <p>Develop and deploy ML models that enhance product intelligence across a suite of AI-driven applications.</p>
+                <br>
+                <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+                <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn">Rejected</button>
+            </div>
+
+            <!-- card-07 -->
+            <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none">
+                <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h1 class="text-[#002C5C] text-[18px] font-semibold pb-1">SecureLayer Corp</h1>
+                <h2 class="text-[#64748B] text-[16px] font-regular pb-4">Cybersecurity Analyst</h2>
+                <h3 class="text-[#64748B] text-[14px] font-regular">Hybrid • Full-time • $110,000 - $150,000</h3>
+                <div class="pt-4 pb-8">
+                    <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+                </div>
+                <p>Monitor, detect, and respond to security threats to protect critical infrastructure and sensitive customer data.</p>
+                <br>
+                <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+                <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn">Rejected</button>
+            </div>
+
+            <!-- card-08 -->
+            <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none">
+                <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <h1 class="text-[#002C5C] text-[18px] font-semibold pb-1">GrowthLoop Agency</h1>
+                <h2 class="text-[#64748B] text-[16px] font-regular pb-4">Full Stack Developer</h2>
+                <h3 class="text-[#64748B] text-[14px] font-regular">Remote • Full-time • $105,000 - $145,000</h3>
+                <div class="pt-4 pb-8">
+                    <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
+                </div>
+                <p>Build end-to-end web features for high-growth SaaS clients using modern JavaScript frameworks and cloud services.</p>
+                <br>
+                <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
+                <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn">Rejected</button>
+            </div>
+
         </div>
-
-        <p>Design and maintain scalable data pipelines that power real-time analytics for enterprise clients globally.</p>
-        <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
-        </div>      
-        <!-- card-02 -->      
-
-
-        <!-- card-03 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none">
-            
-        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
-        <i class="fa-regular fa-trash-can"></i>
-        </button>
-
-        <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">CloudNest Solutions </h1> 
-        <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">DevOps Engineer</h2> 
-        <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Full-time • $125,000 - $170,000</h3>
-
-        <div class="pt-4 pb-8">
-            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
-        </div>
-
-        <p>Manage cloud infrastructure and CI/CD pipelines to ensure seamless deployment across distributed systems.</p>
-        <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
-        </div>
-        <!-- card-03 -->            
-        
-
-        <!-- card-04 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none"> 
-
-        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
-        <i class="fa-regular fa-trash-can"></i>
-        </button>
-
-        <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">FinEdge Technologies </h1> 
-        <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">Backend Developer</h2> 
-        <h3 class=" text-[#64748B] text-[14px] font-regular ">On-site • Full-time • $115,000 - $155,000</h3>
-
-        <div class="pt-4 pb-8">
-            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
-        </div>
-
-        <p>Build robust REST APIs and microservices supporting millions of financial transactions processed daily.</p>
-        <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
-        </div>
-        <!-- card-04 --> 
-
-
-        <!-- card-05 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none"> 
-
-        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
-        <i class="fa-regular fa-trash-can"></i>
-        </button>           
-
-        <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">PixelForge Studio </h1> 
-        <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">UI/UX Designer</h2> 
-        <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Contract • $90,000 - $130,000</h3>
-
-        <div class="pt-4 pb-8">
-            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
-        </div>
-
-        <p>Craft intuitive and visually compelling user experiences for consumer-facing web and mobile products.</p>
-        <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
-        </div>
-        <!-- card-05 --> 
-
-
-        <!-- card-06 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none"> 
-
-        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
-        <i class="fa-regular fa-trash-can"></i>
-        </button>
-
-        <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">NeuralBridge AI </h1> 
-        <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">Machine Learning Engineer</h2> 
-        <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Full-time • $140,000 - $190,000</h3>
-
-        <div class="pt-4 pb-8">
-            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
-        </div>
-
-        <p>Develop and deploy ML models that enhance product intelligence across a suite of AI-driven applications.</p>
-        <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
-        </div>
-        <!-- card-06 --> 
-
-
-         <!-- card-07 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative" data-status="none"> 
-
-        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
-        <i class="fa-regular fa-trash-can"></i>
-        </button>
-
-        <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">SecureLayer Corp </h1> 
-        <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">Cybersecurity Analyst</h2> 
-        <h3 class=" text-[#64748B] text-[14px] font-regular ">Hybrid • Full-time • $110,000 - $150,000</h3>
-
-        <div class="pt-4 pb-8">
-            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
-        </div>
-
-        <p>Monitor, detect, and respond to security threats to protect critical infrastructure and sensitive customer data.</p>
-        <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
-        </div>
-        <!-- card-07 --> 
-
-
-        <!-- card-08 -->
-        <div class="col-span-5 row-span-22 bg-[#ffffff] stroke-[#F1F2F4] rounded-[8px] px-[24px] py-[24px] relative " data-status="none"> 
-
-        <button class="delete-btn absolute top-6 right-6 text-[#94A3B8] hover:text-[#EF4444]">
-        <i class="fa-regular fa-trash-can"></i>
-        </button>
-
-        <h1 class=" text-[#002C5C] text-[18px] font-semibold pb-1 ">GrowthLoop Agency </h1> 
-        <h2 class=" text-[#64748B] text-[16px] font-regular pb-4 ">Full Stack Developer</h2> 
-        <h3 class=" text-[#64748B] text-[14px] font-regular ">Remote • Full-time • $105,000 - $145,000</h3>
-
-        <div class="pt-4 pb-8">
-            <button class="status-badge bg-[#EEF4FF] text-[#002C5C] px-6 py-2.5 font-medium rounded-[5px]">NOT APPLIED</button>
-        </div>
-
-        <p>Build end-to-end web features for high-growth SaaS clients using modern JavaScript frameworks and cloud services.</p>
-        <br>
-        <button class="border border-[#10B981] text-[#10B981] px-6 py-2.5 font-medium rounded-[5px] shadow interview-btn">Interview</button>
-        <button class="border border-[#EF4444] text-[#EF4444] px-6 py-2.5 font-medium rounded-[5px] shadow rejected-btn" >Rejected</button>
-        </div>
-        <!-- card-08 -->
-        
-
-
-
-    </div>
     </section>
 
-
-    
 </body>
-
-
-
 </html>
